@@ -1,0 +1,20 @@
+
+%h2= t "movie.index.title" 
+%p= t "movie.index.description"   
+ 
+%table#movies
+ %thead
+  %tr
+  %th= t "movie.index.name" 
+  %th= t "movie.index.rating"
+  %th=t "movie.index.release_date"
+  %th=t "movie.index.more_info"
+  %tbody
+- @movies.each do |movie|
+ %tr
+  %td= movie.title
+  %td= movie.rating
+  %td= movie.release_date
+  %td= link_to "More about #{movie.title}", movie_path(movie) 
+
+= link_to "Add new movie", new_movie_path
