@@ -7,7 +7,7 @@
     </li>
   <% else %>
     <li>
-    <%= link_to 'Login', new_user_session_path %>
+    <%= link_to I18n.t('devise.shared.links.Login'), new_user_session_path %>
     </li>
   <% end %>
   <% if user_signed_in? %>
@@ -16,7 +16,7 @@
     </li>
   <% else %>
     <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
+    <%= link_to I18n.t('devise.shared.links.sign_up'), new_user_registration_path %>
     </li>
   <% end %>
  </ul>
