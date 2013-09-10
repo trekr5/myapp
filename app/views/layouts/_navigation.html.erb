@@ -3,7 +3,7 @@
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
     <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+    <%= link_to I18n.t('devise.shared.links.Logout'), destroy_user_session_path, :method=>'delete' %>
     </li>
   <% else %>
     <li>
@@ -12,7 +12,7 @@
   <% end %>
   <% if user_signed_in? %>
     <li>
-    <%= link_to 'Edit profile', edit_user_registration_path %>
+    <%= link_to I18n.t('devise.shared.links.edit_profile'), edit_user_registration_path %>
     </li>
   <% else %>
     <li>
